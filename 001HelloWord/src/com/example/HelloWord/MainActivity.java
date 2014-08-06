@@ -10,6 +10,8 @@ import android.os.Bundle;
 import android.provider.Contacts;
 import android.provider.ContactsContract;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends Activity {
 //public class MainActivity extends ActionBarActivity {
@@ -28,6 +30,17 @@ public class MainActivity extends Activity {
 //
 //        startActivity(i);
 //        access();
+        Button btnLinear = (Button)findViewById(R.id.idBtnLinearLayout);
+        btnLinear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, LinearActivity.class);
+                startActivity(i);
+
+            }
+        });
+
+
     }
 
     public void access() {

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:orientation="horizontal"
+                  android:layout_width="fill_parent"
+                  android:layout_weight="1"
+                  android:layout_height="fill_parent">
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="fill_parent"
+                  android:layout_weight="1"
+                  android:text="red"
+                  android:background="#FF0000"/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="fill_parent"
+                  android:layout_weight="1"
+                  android:text="verde"
+                  android:background="#00FF00"/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="fill_parent"
+                  android:layout_weight="1"
+                  android:text="azul"
+                  android:background="#0000FF"/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="fill_parent"
+                  android:layout_weight="1"
+                  android:text="red"
+                  android:background="#FF0000"/>
+
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:orientation="vertical"
+                  android:layout_width="fill_parent"
+                  android:layout_weight="1"
+                  android:layout_height="fill_parent">
+
+        <TextView android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1"
+                  android:text="red"
+                  android:textSize="15pt"
+                  android:background="#FFFFFF"/>
+        <TextView android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1"
+                  android:text="verde"
+                  android:textSize="15pt"
+                  android:background="#00FF00"/>
+        <TextView android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1"
+                  android:text="azul"
+                  android:textSize="15pt"
+                  android:background="#0000FF"/>
+        <TextView android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1"
+                  android:text="red"
+                  android:textSize="15pt"
+                  android:background="#FFFFFF"/>
+
+    </LinearLayout>
+
+</LinearLayout>
