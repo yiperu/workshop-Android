@@ -3,4 +3,5 @@
     <string name="app_name">HelloWord</string>
 
     <string name="btnTitLenear">ir a Linear Layout</string>
+    <string name="btnTitTabla">ir a la Tabla del Login</string>
 </resources>

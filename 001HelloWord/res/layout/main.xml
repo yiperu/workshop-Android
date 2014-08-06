@@ -14,6 +14,11 @@
             android:layout_height="wrap_content"
             android:text="@string/btnTitLenear"
             android:id="@+id/idBtnLinearLayout"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnTitTabla"
+            android:id="@+id/idBtnTableLayout"/>
 
 </LinearLayout>
 

@@ -26,6 +26,9 @@
         <activity android:name=".SecondActivity"
                   android:label="Segundo Activity">
         </activity>
+        <activity android:name=".TableActivity"
+                  android:label="TABLA Activity">
+        </activity>
         <receiver android:name=".HelloBroadcastReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.ACTION_POWER_CONNECTED">

@@ -40,6 +40,16 @@ public class MainActivity extends Activity {
             }
         });
 
+        Button btnTable = (Button)findViewById(R.id.idBtnTableLayout);
+        btnTable.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, TableActivity.class);
+                startActivity(i);
+
+            }
+        });
+
 
     }
 
