@@ -3,7 +3,9 @@ package com.example.HelloWord;
 import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.database.Cursor;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.provider.Contacts;
 import android.provider.ContactsContract;
@@ -14,20 +16,19 @@ public class MainActivity extends Activity {
     /**
      * Called when the activity is first created.
      */
+    private HelloBroadcastReceiver mReceiver;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-        Intent i = new Intent(this, SecondActivity.class);
-        i.putExtra("variable01", "Dato de la Variable 01");
-        startActivity(i);
-
-        access();
-
-
+//        Intent i = new Intent(this, SecondActivity.class);
+//        i.putExtra("variable01", "Dato de la Variable 01");
+//
+//        startActivity(i);
+//        access();
     }
-
 
     public void access() {
         ContentResolver cr = getContentResolver();
@@ -39,5 +40,22 @@ public class MainActivity extends Activity {
                 String id = cur.getString(cur.getColumnIndex(Contacts.People._ID));
             }
         }
+    }
+
+    @Override
+    protected void onResume() {
+        // Se registra el broadcast
+        this.mReceiver = new HelloBroadcastReceiver();
+        registerReceiver(this.mReceiver, new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION));
+        super.onResume();
+        Log.d("Hello Word", "Estas pasando por onResume");
+    }
+
+    @Override
+    protected void onPause() {
+        // Se des-registra el broadcast
+        unregisterReceiver(mReceiver);
+        super.onPause();
+        Log.d("Hello Word","onPause");
     }
 }
